@@ -1,3 +1,9 @@
+import Card from "@components/Card/Card";
+
 export default function Home() {
-  return <div>Coucou</div>;
+  return (
+    <div>
+      <Card />
+    </div>
+  );
 }
