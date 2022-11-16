@@ -1,9 +1,11 @@
-import Collection from "@pages/Collection/Collection";
+import NavBar from "@components/Navbar/NavBar";
+import background from "@assets/background.jpg";
 
 function App() {
   return (
     <div>
-      <Collection />
+      <NavBar />
+      <img src={background} alt="background" />
     </div>
   );
 }
