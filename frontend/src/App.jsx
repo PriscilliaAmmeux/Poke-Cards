@@ -1,9 +1,9 @@
-import Home from "@pages/Home";
+import Collection from "@pages/Collection/Collection";
 
 function App() {
   return (
     <div>
-      <Home />
+      <Collection />
     </div>
   );
 }
