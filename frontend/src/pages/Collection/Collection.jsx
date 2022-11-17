@@ -1,5 +1,7 @@
 import Card from "@components/Card/Card";
+import InputFilter from "@components/InputFilter/InputFilter";
 import NavBar from "@components/Navbar/NavBar";
+import TypesFilter from "@components/TypesFilter/TypesFilter";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Style from "./style";
@@ -15,6 +17,10 @@ export default function Collection() {
   return (
     <Style>
       <NavBar />
+      <div className="filter">
+        <TypesFilter />
+        <InputFilter />
+      </div>
       <ul>
         {card.map((element) => {
           return (
