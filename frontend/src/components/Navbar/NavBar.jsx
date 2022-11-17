@@ -3,7 +3,7 @@ import Style from "./style";
 export default function NavBar() {
   return (
     <Style>
-      <ul>
+      <ul className="navbar">
         <li>
           <a href="Home">Home</a>
         </li>
