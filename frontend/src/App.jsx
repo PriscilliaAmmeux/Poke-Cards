@@ -1,9 +1,11 @@
-import Home from "@pages/Home/Home";
+import NavBar from "@components/Navbar/NavBar";
+import background from "@assets/background.jpg";
 
 function App() {
   return (
     <div>
-      <Home />
+      <NavBar />
+      <img src={background} alt="background" />
     </div>
   );
 }
