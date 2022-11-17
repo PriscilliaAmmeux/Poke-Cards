@@ -8,4 +8,10 @@ export default styled.ul`
     height: 3rem;
     width: 3rem;
   }
+
+  .filter {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+  }
 `;

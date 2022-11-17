@@ -21,55 +21,89 @@ export default function TypesFilter() {
   return (
     <Style>
       <li>
-        <img src={elec} alt="electrical type" />
+        <button type="submit" className="filter">
+          <img src={elec} alt="electrical type" />
+        </button>
       </li>
       <li>
-        <img src={fire} alt="fire type" />
+        <button type="submit" className="filter">
+          <img src={fire} alt="fire type" />
+        </button>
       </li>
       <li>
-        <img src={fly} alt="fly type" />
+        <button type="submit" className="filter">
+          <img src={fly} alt="fly type" />
+        </button>
       </li>
       <li>
-        <img src={frozzen} alt="ice type" />
+        <button type="submit" className="filter">
+          <img src={frozzen} alt="ice type" />
+        </button>
       </li>
       <li>
-        <img src={insect} alt="insect type" />
+        <button type="submit" className="filter">
+          <img src={insect} alt="insect type" />
+        </button>
       </li>
       <li>
-        <img src={poison} alt="poison type" />
+        <button type="submit" className="filter">
+          <img src={poison} alt="poison type" />
+        </button>
       </li>
       <li>
-        <img src={psy} alt="psy type" />
+        <button type="submit" className="filter">
+          <img src={psy} alt="psy type" />
+        </button>
       </li>
       <li>
-        <img src={rock} alt="rock type" />
+        <button type="submit" className="filter">
+          <img src={rock} alt="rock type" />
+        </button>
       </li>
       <li>
-        <img src={water} alt="water type" />
+        <button type="submit" className="filter">
+          <img src={water} alt="water type" />
+        </button>
       </li>
       <li>
-        <img src={plant} alt="grace type" />
+        <button type="submit" className="filter">
+          <img src={plant} alt="grace type" />
+        </button>
       </li>
       <li>
-        <img src={dragon} alt="dragon type" />
+        <button type="submit" className="filter">
+          <img src={dragon} alt="dragon type" />
+        </button>
       </li>
       <li>
-        <img src={fairy} alt="fairy type" />
+        <button type="submit" className="filter">
+          <img src={fairy} alt="fairy type" />
+        </button>
       </li>
       <li>
-        <img src={tenebre} alt="tenebre type" />
+        <button type="submit" className="filter">
+          <img src={tenebre} alt="tenebre type" />
+        </button>
       </li>
       <li>
-        <img src={steel} alt="steel type" />
+        <button type="submit" className="filter">
+          <img src={steel} alt="steel type" />
+        </button>
       </li>
       <li>
-        <img src={sol} alt="sol type" />
+        <button type="submit" className="filter">
+          <img src={sol} alt="sol type" />
+        </button>
       </li>
       <li>
-        <img src={normal} alt="normal type" />
+        <button type="submit" className="filter">
+          <img src={normal} alt="normal type" />
+        </button>
       </li>
       <li>
-        <img src={combat} alt="fairy type" />
+        <button type="submit" className="filter">
+          <img src={combat} alt="fairy type" />
+        </button>
       </li>
     </Style>
   );
