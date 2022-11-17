@@ -5,7 +5,7 @@ export default styled.nav`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 2rem;
+    padding: 2rem;
   }
   li > a {
     font-weight: bold;

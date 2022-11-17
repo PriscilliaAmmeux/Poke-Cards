@@ -1,12 +1,12 @@
-import NavBar from "@components/Navbar/NavBar";
-import background from "@assets/background.jpg";
+import Collection from "@pages/Collection/Collection";
+import "reset-css";
+import Style from "./style";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <img src={background} alt="background" />
-    </div>
+    <Style>
+      <Collection />
+    </Style>
   );
 }
 
