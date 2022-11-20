@@ -13,7 +13,7 @@ export default styled.section`
     margin: 0.5rem;
   }
 
-  .filter {
+  section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

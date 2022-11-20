@@ -8,19 +8,24 @@ import Style from "./style";
 
 export default function Collection() {
   const [card, setCard] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     axios.get("https://api.pokemontcg.io/v2/cards").then(({ data }) => {
       setCard(data.data);
     });
   }, []);
+
   return (
     <Style>
       <NavBar />
-      <div className="filter">
+      <section>
         <TypesFilter />
-        <InputFilter />
-      </div>
+        <InputFilter
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+        />
+      </section>
       <ul>
         {card.map((element) => {
           return (
