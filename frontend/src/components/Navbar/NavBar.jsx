@@ -1,24 +1,25 @@
+import { Link } from "react-router-dom";
 import Style from "./style";
 
 export default function NavBar() {
   return (
     <Style>
       <ul>
-        <li>
-          <a href="Home">Home</a>
-        </li>
-        <li>
-          <a href="My Deck">My Deck</a>
-        </li>
-        <li>
-          <a href="Collection">Collection</a>
-        </li>
-        <li>
-          <a href="Play">Play</a>
-        </li>
-        <li>
-          <a href="Contact">Contact</a>
-        </li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/deck">
+          <li>My Deck</li>
+        </Link>
+        <Link to="/collection">
+          <li>Collection</li>
+        </Link>
+        <Link to="/gamesPages">
+          <li>Play</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
       </ul>
     </Style>
   );
