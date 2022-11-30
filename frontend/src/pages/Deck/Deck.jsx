@@ -1,3 +1,4 @@
+import NavBar from "@components/Navbar/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Style from "./style";
@@ -12,6 +13,7 @@ export default function Deck() {
   }, []);
   return (
     <Style>
+      <NavBar />
       <h1>Pseudo : wallet </h1>
       <p>1600$</p>
       <h2>Your collection</h2>
