@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.nav`
-  ul {
+  ul.navbar {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

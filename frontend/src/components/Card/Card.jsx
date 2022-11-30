@@ -1,12 +1,7 @@
 import PropTypes from "prop-types";
 
 export default function Card({ cardData }) {
-  return (
-    <>
-      <img src={cardData.images.small} alt={cardData.name} />
-      <h2>{cardData.name}</h2>
-    </>
-  );
+  return <img src={cardData.images.small} alt={cardData.name} />;
 }
 
 Card.propTypes = {

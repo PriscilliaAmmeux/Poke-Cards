@@ -12,4 +12,12 @@ export default styled.section`
     list-style: none;
     margin: 0.5rem;
   }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+  }
 `;
