@@ -5,5 +5,6 @@ export default styled.section`
     padding: 0.5rem;
     border-radius: 15px;
     background-color: transparent;
+    color: white;
   }
 `;

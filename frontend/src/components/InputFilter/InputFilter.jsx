@@ -1,8 +1,7 @@
 import PropTypes from "react";
 import Style from "./style";
 
-export default function InputFilter({ props }) {
-  const { searchValue, setSearchValue } = props;
+export default function InputFilter({ searchValue, setSearchValue }) {
   return (
     <Style>
       <input
@@ -16,7 +15,6 @@ export default function InputFilter({ props }) {
 }
 
 InputFilter.propTypes = {
-  props: PropTypes.string.isRequired,
   searchValue: PropTypes.string.isRequired,
   setSearchValue: PropTypes.string.isRequired,
 };
