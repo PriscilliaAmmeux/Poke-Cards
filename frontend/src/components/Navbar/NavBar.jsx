@@ -5,19 +5,19 @@ export default function NavBar() {
   return (
     <Style>
       <ul>
-        <Link to="/">
+        <Link className="link" to="/">
           <li>Home</li>
         </Link>
-        <Link to="/deck">
+        <Link className="link" to="/deck">
           <li>My Deck</li>
         </Link>
-        <Link to="/collection">
+        <Link className="link" to="/collection">
           <li>Collection</li>
         </Link>
-        <Link to="/gamesPages">
+        <Link className="link" to="/gamespage">
           <li>Play</li>
         </Link>
-        <Link to="/contact">
+        <Link className="link" to="/contact">
           <li>Contact</li>
         </Link>
       </ul>
