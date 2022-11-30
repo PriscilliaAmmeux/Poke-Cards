@@ -1,9 +1,21 @@
 import styled from "styled-components";
-import image from "@assets/background.png";
 
 export default styled.section`
-  background-image: url(${image});
   display: flex;
-  justify-content: center;
-  align-items: center;
+  li {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px #fff dotted;
+    border-radius: 2rem;
+    margin: 5rem;
+    padding: 1rem;
+    list-style: none;
+  }
+  img {
+    position: relative;
+    z-index: -1;
+    width: 100vh;
+    height: 100vh;
+  }
 `;
