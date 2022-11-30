@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/deck" element={<Deck />} />
         <Route path="/collection" element={<Collection />} />
-        <Route path="/gamesPage" element={<GamesPage />} />
+        <Route path="/gamespage" element={<GamesPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Style>

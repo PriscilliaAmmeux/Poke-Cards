@@ -1,5 +1,11 @@
-import games from "@assets/games.png";
+import BattleGround from "@components/BattleGround/BattleGround";
+import NavBar from "@components/Navbar/NavBar";
 
 export default function GamesPage() {
-  return <img src={games} alt="background games" />;
+  return (
+    <>
+      <NavBar />
+      <BattleGround />
+    </>
+  );
 }
