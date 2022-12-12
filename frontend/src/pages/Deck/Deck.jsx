@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import Style from "./style";
 
 export default function Deck() {
-  const [card, setCard] = useState([]);
+  const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.pokemontcg.io/v2/cards").then(({ data }) => {
-      setCard(data.data);
-    });
+    axios
+      .get("https://api.pokemontcg.io/v2/cards/?results=10")
+      .then(({ data }) => {
+        setCards(data.data);
+      });
   }, []);
   return (
     <Style>
@@ -18,16 +20,13 @@ export default function Deck() {
       <p>1600$</p>
       <h2>Your collection</h2>
       <ul>
-        {card
-          .filter((element) => {
-            if (element.level <= 50) {
-              return true;
-            }
-            return false;
-          })
-          .map((element) => {
-            return <li key={element.id}> {element.images.small}</li>;
-          })}
+        {cards.map((element) => {
+          return (
+            <li key={element.id}>
+              <img src={element.images.small} alt={element.images.small} />
+            </li>
+          );
+        })}
       </ul>
       <h3>Your actuel deck</h3>
     </Style>
