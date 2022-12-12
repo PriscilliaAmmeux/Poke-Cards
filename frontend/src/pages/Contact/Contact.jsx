@@ -7,8 +7,10 @@ export default function Contact() {
   return (
     <Style>
       <NavBar />
-      <h1>Contact Us</h1>
-      <ContactForm />
+      <div className="form">
+        <h1>Contact Us</h1>
+        <ContactForm />
+      </div>
     </Style>
   );
 }
