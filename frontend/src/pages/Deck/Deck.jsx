@@ -8,7 +8,7 @@ export default function Deck() {
 
   useEffect(() => {
     axios
-      .get("https://api.pokemontcg.io/v2/cards/?results=10")
+      .get("https://api.pokemontcg.io/v2/cards/?results=5")
       .then(({ data }) => {
         setCards(data.data);
       });
@@ -20,10 +20,10 @@ export default function Deck() {
       <p>1600$</p>
       <h2>Your collection</h2>
       <ul>
-        {cards.map((element) => {
+        {cards.map((data) => {
           return (
-            <li key={element.id}>
-              <img src={element.images.small} alt={element.images.small} />
+            <li key={data.id}>
+              <img src={data.images.small} alt={data.images.small} />
             </li>
           );
         })}
