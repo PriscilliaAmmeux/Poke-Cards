@@ -4,21 +4,21 @@ import Style from "./style";
 export default function NavBar() {
   return (
     <Style>
-      <ul>
+      <ul className="navBar">
         <Link className="link" to="/">
-          <li>Home</li>
+          <li className="item">Home</li>
         </Link>
         <Link className="link" to="/deck">
-          <li>My Deck</li>
+          <li className="item">My Deck</li>
         </Link>
         <Link className="link" to="/collection">
-          <li>Collection</li>
+          <li className="item">Collection</li>
         </Link>
         <Link className="link" to="/gamespage">
-          <li>Play</li>
+          <li className="item">Play</li>
         </Link>
         <Link className="link" to="/contact">
-          <li>Contact</li>
+          <li className="item">Contact</li>
         </Link>
       </ul>
     </Style>

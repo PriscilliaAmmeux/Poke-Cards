@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.nav`
-  ul {
+  .navBar {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -10,7 +10,7 @@ export default styled.nav`
   .link {
     text-decoration: none;
   }
-  li {
+  .item {
     font-weight: bold;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
