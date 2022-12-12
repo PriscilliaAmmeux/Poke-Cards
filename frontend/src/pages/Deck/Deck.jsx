@@ -8,7 +8,7 @@ export default function Deck() {
 
   useEffect(() => {
     axios
-      .get("https://api.pokemontcg.io/v2/cards/?results=5")
+      .get("https://api.pokemontcg.io/v2/cards/?results=10")
       .then(({ data }) => {
         setCards(data.data);
       });
@@ -23,12 +23,29 @@ export default function Deck() {
         {cards.map((data) => {
           return (
             <li key={data.id}>
-              <img src={data.images.small} alt={data.images.small} />
+              <img
+                className="displayDeck"
+                src={data.images.small}
+                alt={data.images.small}
+              />
             </li>
           );
         })}
       </ul>
-      <h3>Your actuel deck</h3>
+      <h2>Your actuel deck</h2>
+      <ul>
+        {cards.map((data) => {
+          return (
+            <li key={data.id}>
+              <img
+                className="displayDeck"
+                src={data.images.small}
+                alt={data.images.small}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </Style>
   );
 }
