@@ -14,13 +14,13 @@ export default styled.section`
   }
 
   .form {
+    margin: 0 40%;
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 500px;
+    height: 50vh;
     padding: 20px;
-    width: 320px;
-    margin: 0 38rem;
+    width: 20vw;
     opacity: 0.5;
     cursor: pointer;
   }
