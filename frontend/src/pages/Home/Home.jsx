@@ -5,6 +5,7 @@ import Style from "./style";
 export default function Home() {
   return (
     <Style>
+      <h1 className="title">Pokecard Games</h1>
       <ul>
         <div className="right">
           <Link className="linkbtn" to="/deck">
