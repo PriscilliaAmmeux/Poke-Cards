@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export default styled.section`
+  @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  .title {
+    font-family: "Press Start 2P", cursive;
+    font-size: 2rem;
+  }
   ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 80%;
   }
   li {
     text-align: center;
