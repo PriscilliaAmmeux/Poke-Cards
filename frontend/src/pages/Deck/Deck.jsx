@@ -5,17 +5,23 @@ import Style from "./style";
 
 export default function Deck() {
   const [cards, setCards] = useState([]);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5000/api/pokemon").then(({ data }) => {
       setCards(data);
     });
   }, []);
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/users/1").then(({ data }) => {
+      setUser(data);
+    });
+  }, []);
   return (
     <Style>
       <NavBar />
-      <h1>Pseudo : wallet </h1>
-      <p>1600$</p>
+      <h1>Pseudo : {user.pseudo} </h1>
+      <p>Wallet : {user.wallet} </p>
       <h2>Your collection</h2>
       <ul>
         {cards
