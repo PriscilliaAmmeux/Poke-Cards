@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const getPokemons = (req, res) => {
-  models.pokemons
+  models.pokemon
     .findAll()
     .then(([pokemons]) => {
       if ([pokemons] !== null) {
@@ -17,7 +17,7 @@ const getPokemons = (req, res) => {
 };
 
 const getPokemonById = (req, res) => {
-  models.pokemons
+  models.pokemon
     .find(req.params.id)
     .then(([user]) => {
       if (user[0] !== null) {
@@ -35,7 +35,7 @@ const getPokemonById = (req, res) => {
 const putPokemonById = (req, res) => {
   const user = req.body;
   user.id = parseInt(req.params.id, 10);
-  models.pokemons
+  models.pokemon
     .update(user)
     .then(([result]) => {
       if (result.affectedRows === 0) {
@@ -52,7 +52,7 @@ const putPokemonById = (req, res) => {
 
 const postPokemon = (req, res) => {
   const user = req.body;
-  models.pokemons
+  models.pokemon
     .insert(user)
     .then(([result]) => {
       res.location(`/api/user/${result.insertId}`).sendStatus(201);

@@ -12,8 +12,8 @@ export default function Collection() {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    axios.get("https://api.pokemontcg.io/v2/cards").then(({ data }) => {
-      setCard(data.data);
+    axios.get("http://localhost:5000/api/pokemon").then(({ data }) => {
+      setCard(data);
     });
   }, []);
   return (
