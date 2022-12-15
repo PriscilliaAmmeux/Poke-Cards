@@ -7,11 +7,9 @@ export default function Deck() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://api.pokemontcg.io/v2/cards/?results=3")
-      .then(({ data }) => {
-        setCards(data.data);
-      });
+    axios.get("http://localhost:5000/api/pokemon").then(({ data }) => {
+      setCards(data);
+    });
   }, []);
   return (
     <Style>
@@ -22,7 +20,7 @@ export default function Deck() {
       <ul>
         {cards
           .filter((data) => {
-            if (data.name === "Bulbasaur" || data.name === "Arcanine") {
+            if (data.level < 8) {
               return true;
             }
             return false;
@@ -32,8 +30,8 @@ export default function Deck() {
               <li key={data.id}>
                 <img
                   className="displayDeck"
-                  src={data.images.small}
-                  alt={data.images.small}
+                  src={data.small_img}
+                  alt={data.name}
                 />
               </li>
             );
@@ -43,7 +41,13 @@ export default function Deck() {
       <ul>
         {cards
           .filter((data) => {
-            if (data.name === "Aerodactyl" || data.name === "Caterpie") {
+            if (
+              data.name === "Buizel" ||
+              data.name === "Combee" ||
+              data.name === "Magnemite" ||
+              data.name === "Chingling" ||
+              data.name === "Starly"
+            ) {
               return true;
             }
             return false;
@@ -53,8 +57,8 @@ export default function Deck() {
               <li key={data.id}>
                 <img
                   className="displayDeck"
-                  src={data.images.small}
-                  alt={data.images.small}
+                  src={data.small_img}
+                  alt={data.name}
                 />
               </li>
             );
