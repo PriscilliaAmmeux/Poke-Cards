@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <img className="pokeball" src={pokeball} alt="Pokeball" />
         <div className="left">
-          <Link className="linkbtn" to="/gamesPages">
+          <Link className="linkbtn" to="/gamesPage">
             <li className="play">Play</li>
           </Link>
           <Link className="linkbtn" to="/contact">
