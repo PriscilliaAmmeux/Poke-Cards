@@ -25,6 +25,13 @@ export default styled.section`
     padding: 1rem;
     font-size: 1.5rem;
     background: linear-gradient(white, red);
+    padding: 10px 30px;
+  }
+  li.deck:hover,
+  li.collec:hover,
+  li.play:hover,
+  li.contact:hover {
+    padding: 10px 50px;
   }
   .linkbtn {
     list-style: none;

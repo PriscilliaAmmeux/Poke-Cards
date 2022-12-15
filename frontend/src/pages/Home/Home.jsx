@@ -9,19 +9,19 @@ export default function Home() {
       <ul>
         <div className="right">
           <Link className="linkbtn" to="/deck">
-            <li>My Deck</li>
+            <li className="deck">My Deck</li>
           </Link>
           <Link className="linkbtn" to="/collection">
-            <li>Collection</li>
+            <li className="collec">Collection</li>
           </Link>
         </div>
         <img className="pokeball" src={pokeball} alt="Pokeball" />
         <div className="left">
-          <Link className="linkbtn" to="/gamesPages">
-            <li>Play</li>
+          <Link className="linkbtn" to="/gamesPage">
+            <li className="play">Play</li>
           </Link>
           <Link className="linkbtn" to="/contact">
-            <li>Contact</li>
+            <li className="contact">Contact</li>
           </Link>
         </div>
       </ul>
