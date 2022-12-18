@@ -39,7 +39,7 @@ export default function Collection() {
           })
           .filter((element) => {
             if (searchValue !== "") {
-              if (element.name === searchValue) {
+              if (element.name.includes(searchValue)) {
                 return true;
               }
               return false;
