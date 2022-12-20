@@ -10,53 +10,102 @@ import combat from "@assets/combat.png";
 import "reset-css";
 import Style from "./style";
 
-export default function TypesFilter() {
+export default function TypesFilter({ type, setType }) {
+  const handleClick = (e) => {
+    setType(e.target.value);
+  };
+  console.log(type);
   return (
     <Style>
       <li className="filter">
-        <button type="submit" className="filter" value="Lightning">
-          <img src={elec} alt="electrical type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={elec}
+          className="filterradio"
+          value="electric"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Fire">
-          <img src={fire} alt="fire type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={fire}
+          className="filterradio"
+          value="fire"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Psychic">
-          <img src={psy} alt="psy type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={psy}
+          className="filterradio"
+          value="psychic"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Water">
-          <img src={water} alt="water type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={water}
+          className="filterradio"
+          value="water"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Grass">
-          <img src={plant} alt="grace type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={plant}
+          className="filterradio"
+          value="plant"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Dragon">
-          <img src={dragon} alt="dragon type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={dragon}
+          className="filterradio"
+          value="dragon"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Darkness">
-          <img src={tenebre} alt="tenebre type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={tenebre}
+          className="filterradio"
+          value="tenebre"
+          onClick={handleClick}
+        />
       </li>
       <li className="filter">
-        <button type="submit" className="filter" value="Metal">
-          <img src={steel} alt="steel type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={steel}
+          className="filterradio"
+          value="steel"
+          onClick={handleClick}
+        />
       </li>
       <li>
-        <button type="submit" className="filter" value="Fighting">
-          <img src={combat} alt="fairy type" />
-        </button>
+        <input
+          name="test"
+          type="image"
+          src={combat}
+          className="filterradio"
+          value="combat"
+          onClick={handleClick}
+        />
       </li>
     </Style>
   );

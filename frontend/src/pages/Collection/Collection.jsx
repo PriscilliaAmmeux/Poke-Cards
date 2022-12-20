@@ -9,18 +9,20 @@ import Style from "./style";
 export default function Collection() {
   const [card, setCard] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [filter, setFilter] = useState("");
+  const [type, setType] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/pokemon").then(({ data }) => {
-      setCard(data);
-    });
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/pokemon`)
+      .then(({ data }) => {
+        setCard(data);
+      });
   }, []);
   return (
     <Style>
       <NavBar />
       <section>
-        <TypesFilter filter={filter} setFilter={setFilter} />
+        <TypesFilter type={type} setType={setType} />
         <InputFilter
           searchValue={searchValue}
           setSearchValue={setSearchValue}
@@ -29,8 +31,8 @@ export default function Collection() {
       <ul>
         {card
           .filter((element) => {
-            if (filter !== "") {
-              if (element.types === filter) {
+            if (type !== "") {
+              if (element.type === type) {
                 return true;
               }
               return false;
@@ -39,7 +41,7 @@ export default function Collection() {
           })
           .filter((element) => {
             if (searchValue !== "") {
-              if (element.name === searchValue) {
+              if (element.name.includes(searchValue)) {
                 return true;
               }
               return false;
