@@ -8,14 +8,18 @@ export default function Deck() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    axios.get("http://192.168.1.95:5000/api/pokemon").then(({ data }) => {
-      setCards(data);
-    });
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/pokemon`)
+      .then(({ data }) => {
+        setCards(data);
+      });
   }, []);
   useEffect(() => {
-    axios.get("http://192.168.1.95:5000/api/users/1").then(({ data }) => {
-      setUser(data);
-    });
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/users/1`)
+      .then(({ data }) => {
+        setUser(data);
+      });
   }, []);
   return (
     <Style>
