@@ -7,9 +7,19 @@ const router = require("./router");
 const app = express();
 
 // use some application-level middlewares
+const whitelist = process.env.FRONTEND_URL.split(",") || [
+  "http://localhost:3000",
+];
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        console.log(origin);
+        callback(new Error("Not allowed by cors"));
+      }
+    },
     optionsSuccessStatus: 200,
   })
 );

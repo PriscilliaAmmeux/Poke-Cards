@@ -5,16 +5,16 @@ export default styled.ul`
   flex-direction: row;
   align-items: center;
 
-  img {
-    height: 3rem;
-    width: 3rem;
-  }
-
   .filter {
     background-color: transparent;
     border: none;
     margin: 0;
     padding: 0;
     cursor: pointer;
+  }
+
+  .filterradio {
+    height: 3rem;
+    width: 3rem;
   }
 `;

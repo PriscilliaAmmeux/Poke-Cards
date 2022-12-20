@@ -8,12 +8,12 @@ export default function Deck() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/pokemon").then(({ data }) => {
+    axios.get("http://192.168.1.95:5000/api/pokemon").then(({ data }) => {
       setCards(data);
     });
   }, []);
   useEffect(() => {
-    axios.get("http://localhost:5000/api/users/1").then(({ data }) => {
+    axios.get("http://192.168.1.95:5000/api/users/1").then(({ data }) => {
       setUser(data);
     });
   }, []);
