@@ -8,6 +8,8 @@ import dragon from "@assets/dragon.png";
 import tenebre from "@assets/tenebre.png";
 import steel from "@assets/steel.png";
 import combat from "@assets/combat.png";
+import normal from "@assets/normal.png";
+import all from "@assets/All.png";
 import "reset-css";
 import Style from "./style";
 
@@ -17,6 +19,17 @@ export default function TypesFilter({ setType }) {
   };
   return (
     <Style>
+      <li className="filter">
+        <input
+          name="test"
+          alt="all type"
+          type="image"
+          src={all}
+          className="filterradio"
+          value=""
+          onClick={handleClick}
+        />
+      </li>
       <li className="filter">
         <input
           name="test"
@@ -105,7 +118,7 @@ export default function TypesFilter({ setType }) {
           onClick={handleClick}
         />
       </li>
-      <li>
+      <li className="filter">
         <input
           name="test"
           alt="fight type"
@@ -113,6 +126,17 @@ export default function TypesFilter({ setType }) {
           src={combat}
           className="filterradio"
           value="fight"
+          onClick={handleClick}
+        />
+      </li>
+      <li className="filter">
+        <input
+          name="test"
+          alt="normal type"
+          type="image"
+          src={normal}
+          className="filterradio"
+          value="normal"
           onClick={handleClick}
         />
       </li>
