@@ -20,4 +20,10 @@ export default styled.section`
     align-items: center;
     margin: 0 2rem;
   }
+
+  @media (max-width: 850px) {
+    .filter {
+      flex-direction: column;
+    }
+  }
 `;

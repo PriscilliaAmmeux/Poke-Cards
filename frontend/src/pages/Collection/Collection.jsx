@@ -21,7 +21,7 @@ export default function Collection() {
   return (
     <Style>
       <NavBar />
-      <section>
+      <section className="filter">
         <TypesFilter type={type} setType={setType} />
         <InputFilter
           searchValue={searchValue}
