@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import elec from "@assets/elec.png";
 import fire from "@assets/fire.png";
 import psy from "@assets/psy.png";
@@ -10,16 +11,16 @@ import combat from "@assets/combat.png";
 import "reset-css";
 import Style from "./style";
 
-export default function TypesFilter({ type, setType }) {
+export default function TypesFilter({ setType }) {
   const handleClick = (e) => {
     setType(e.target.value);
   };
-  console.log(type);
   return (
     <Style>
       <li className="filter">
         <input
           name="test"
+          alt="electric type"
           type="image"
           src={elec}
           className="filterradio"
@@ -30,6 +31,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="fire type"
           type="image"
           src={fire}
           className="filterradio"
@@ -40,6 +42,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="psychic type"
           type="image"
           src={psy}
           className="filterradio"
@@ -50,6 +53,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="water type"
           type="image"
           src={water}
           className="filterradio"
@@ -60,6 +64,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="plant type"
           type="image"
           src={plant}
           className="filterradio"
@@ -70,6 +75,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="dragon type"
           type="image"
           src={dragon}
           className="filterradio"
@@ -80,6 +86,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="tenebre type"
           type="image"
           src={tenebre}
           className="filterradio"
@@ -90,6 +97,7 @@ export default function TypesFilter({ type, setType }) {
       <li className="filter">
         <input
           name="test"
+          alt="steel type"
           type="image"
           src={steel}
           className="filterradio"
@@ -100,13 +108,18 @@ export default function TypesFilter({ type, setType }) {
       <li>
         <input
           name="test"
+          alt="fight type"
           type="image"
           src={combat}
           className="filterradio"
-          value="combat"
+          value="fight"
           onClick={handleClick}
         />
       </li>
     </Style>
   );
 }
+
+TypesFilter.propTypes = {
+  setType: PropTypes.string.isRequired,
+};

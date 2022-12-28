@@ -12,11 +12,10 @@ const whitelist = process.env.FRONTEND_URL.split(",") || [
 ];
 app.use(
   cors({
-    origin: function (origin, callback) {
+    origin(origin, callback) {
       if (whitelist.indexOf(origin) !== -1) {
         callback(null, true);
       } else {
-        console.log(origin);
         callback(new Error("Not allowed by cors"));
       }
     },
