@@ -22,7 +22,7 @@ export default function Collection() {
     <Style>
       <NavBar />
       <section className="filter">
-        <TypesFilter type={type} setType={setType} />
+        <TypesFilter setType={setType} />
         <InputFilter
           searchValue={searchValue}
           setSearchValue={setSearchValue}
