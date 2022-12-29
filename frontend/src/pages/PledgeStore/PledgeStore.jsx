@@ -24,6 +24,14 @@ export default function PledgeStore() {
         setPurchaseValue(data.price);
       });
   }, []);
+  useEffect(() => {
+    const newUser = {
+      name: "Sax59",
+      email: "waquetv@gmail.com",
+      wallet: { wallet },
+    };
+    axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/users/1`, newUser);
+  }, []);
   return (
     <Style>
       <NavBar />
