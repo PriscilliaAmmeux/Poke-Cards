@@ -1,4 +1,4 @@
-import Card from "@components/Card/Card";
+import Cards from "@components/Cards/Cards";
 import InputFilter from "@components/InputFilter/InputFilter";
 import NavBar from "@components/Navbar/NavBar";
 import TypesFilter from "@components/TypesFilter/TypesFilter";
@@ -52,7 +52,7 @@ export default function Collection() {
           .map((element) => {
             return (
               <li key={element.id}>
-                <Card cardData={element} isBuy={isBuy} setIsBuy={setIsBuy} />
+                <Cards cardData={element} isBuy={isBuy} setIsBuy={setIsBuy} />
               </li>
             );
           })}

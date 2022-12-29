@@ -5,6 +5,7 @@ import Deck from "@pages/Deck/Deck";
 import Collection from "@pages/Collection/Collection";
 import GamesPage from "@pages/GamesPage/GamesPage";
 import Contact from "@pages/Contact/Contact";
+import PledgeStore from "@pages/PledgeStore/PledgeStore";
 import Style from "./style";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/gamespage" element={<GamesPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pledge" element={<PledgeStore />} />
       </Routes>
     </Style>
   );
