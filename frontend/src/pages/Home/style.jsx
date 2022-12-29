@@ -36,6 +36,7 @@ export default styled.section`
     font-size: 2rem;
     justify-content: center;
     color: #f1f1f1;
+    margin-bottom: 10rem;
   }
 
   @media screen and (min-width: 601px) {
@@ -49,7 +50,7 @@ export default styled.section`
       justify-content: center;
       height: 80%;
     }
-    .deck {
+    li {
       text-align: center;
       color: #f1f1f1;
       border-radius: 2rem;
