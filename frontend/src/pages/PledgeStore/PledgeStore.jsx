@@ -8,13 +8,12 @@ import Style from "./style";
 export default function PledgeStore() {
   const [purchaseValue, setPurchaseValue] = useState([]);
   const [user, setUser] = useState([]);
-  const [wallet, setWallet] = useState(2000000);
-
+  // const [wallet, setWallet] = useState(2000000);
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/api/users/1`)
       .then(({ data }) => {
-        setUser(data.wallet);
+        setUser(data);
       });
   }, []);
   useEffect(() => {
@@ -23,14 +22,6 @@ export default function PledgeStore() {
       .then(({ data }) => {
         setPurchaseValue(data.price);
       });
-  }, []);
-  useEffect(() => {
-    const newUser = {
-      name: "Sax59",
-      email: "waquetv@gmail.com",
-      wallet: { wallet },
-    };
-    axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/users/1`, newUser);
   }, []);
   return (
     <Style>
@@ -42,8 +33,8 @@ export default function PledgeStore() {
           <PledgeCount
             user={user}
             purchaseValue={purchaseValue}
-            setWallet={setWallet}
-            wallet={wallet}
+            // setWallet={setWallet}
+            // wallet={wallet}
           />
         </div>
       </section>
