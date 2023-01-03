@@ -4,6 +4,7 @@ import NavBar from "@components/Navbar/NavBar";
 import TypesFilter from "@components/TypesFilter/TypesFilter";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Style from "./style";
 
 export default function Collection() {
@@ -56,6 +57,9 @@ export default function Collection() {
                   <p>
                     Price: <span>{element.price}</span>$
                   </p>
+                  <Link to="/carddetail">
+                    <button type="button">More detail</button>
+                  </Link>
                   <button type="submit">Add to cart</button>
                 </div>
               </li>
