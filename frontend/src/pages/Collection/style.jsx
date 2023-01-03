@@ -21,6 +21,13 @@ export default styled.section`
     margin: 0 2rem;
   }
 
+  .purchase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   @media (max-width: 850px) {
     .filter {
       flex-direction: column;

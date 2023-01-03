@@ -5,7 +5,4 @@ export default styled.article`
     margin: 1rem;
     height: 50vh;
   }
-  .cardPrice {
-    margin: 1rem;
-  }
 `;
