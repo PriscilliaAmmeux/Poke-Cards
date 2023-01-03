@@ -3,6 +3,7 @@ import styled from "styled-components";
 export default styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: right;
 
@@ -57,7 +58,7 @@ export default styled.section`
       margin: 5rem;
       padding: 1rem;
       font-size: 1.5rem;
-      background: linear-gradient(white, red);
+      background: linear-gradient(#f1f1f1, red);
       padding: 10px 30px;
     }
     li.deck:hover,
@@ -85,6 +86,11 @@ export default styled.section`
       text-align: center;
       margin: 20rem 5rem;
       display: flex;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
