@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
 export default styled.article`
-  height: 80vh;
+  .cardImage {
+    margin: 1rem;
+    height: 50vh;
+  }
+  .cardPrice {
+    margin: 1rem;
+  }
 `;

@@ -1,4 +1,4 @@
-import Card from "@components/Card/Card";
+import Cards from "@components/Cards/Cards";
 import InputFilter from "@components/InputFilter/InputFilter";
 import NavBar from "@components/Navbar/NavBar";
 import TypesFilter from "@components/TypesFilter/TypesFilter";
@@ -10,6 +10,7 @@ export default function Collection() {
   const [card, setCard] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [type, setType] = useState("");
+  const [isBuy, setIsBuy] = useState(false);
 
   useEffect(() => {
     axios
@@ -51,7 +52,7 @@ export default function Collection() {
           .map((element) => {
             return (
               <li key={element.id}>
-                <Card cardData={element} />
+                <Cards cardData={element} isBuy={isBuy} setIsBuy={setIsBuy} />
               </li>
             );
           })}
