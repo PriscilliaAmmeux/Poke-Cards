@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default styled.section`
+  background-color: yellowgreen;
   .menuContainer {
     display: none;
   }
@@ -32,8 +33,8 @@ export default styled.section`
       position: relative;
       z-index: 3;
       justify-content: flex-end;
-      margin-top: 5rem;
-      margin-right: 2rem;
+      margin-top: 1rem;
+      margin-right: 3rem;
     }
 
     .menuContent {
@@ -41,7 +42,6 @@ export default styled.section`
       top: 100%;
       transition: 0.3s all ease-in-out;
       left: 50%;
-      opacity: 0;
       width: 100vw;
       aspect-ratio: 1;
     }
@@ -50,7 +50,9 @@ export default styled.section`
       left: -600%;
       opacity: 1;
     }
-
+    .menuContent.closed {
+      opacity: 0;
+    }
     .nav-links-burger {
       text-decoration: none;
     }

@@ -6,5 +6,5 @@ export default styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 `;

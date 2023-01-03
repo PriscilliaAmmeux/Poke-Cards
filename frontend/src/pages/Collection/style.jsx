@@ -21,7 +21,7 @@ export default styled.section`
     margin: 0 2rem;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 600px) {
     .filter {
       flex-direction: column;
     }
