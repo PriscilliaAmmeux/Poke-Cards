@@ -19,7 +19,7 @@ function App() {
         <Route path="/gamespage" element={<GamesPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pledge" element={<PledgeStore />} />
-        <Route path="/carddetail" element={<CardDetail />} />
+        <Route path="/carddetail/:id" element={<CardDetail />} />
       </Routes>
     </Style>
   );

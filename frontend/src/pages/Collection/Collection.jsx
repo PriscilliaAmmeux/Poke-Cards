@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Card from "@components/Card/Card";
 import InputFilter from "@components/InputFilter/InputFilter";
 import NavBar from "@components/Navbar/NavBar";
 import TypesFilter from "@components/TypesFilter/TypesFilter";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Style from "./style";
 
 export default function Collection() {
@@ -51,13 +51,13 @@ export default function Collection() {
           })
           .map((element) => {
             return (
-              <li key={element.id}>
+              <li className="card" key={element.id}>
                 <Card cardData={element} />
                 <div className="purchase">
                   <p>
                     Price: <span>{element.price}</span>$
                   </p>
-                  <Link to="/carddetail">
+                  <Link to={`/carddetail/${element.id}`}>
                     <button type="button">More detail</button>
                   </Link>
                   <button type="submit">Add to cart</button>
