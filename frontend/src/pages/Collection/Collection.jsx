@@ -1,16 +1,16 @@
-import Cards from "@components/Cards/Cards";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Card from "@components/Card/Card";
 import InputFilter from "@components/InputFilter/InputFilter";
 import NavBar from "@components/Navbar/NavBar";
 import TypesFilter from "@components/TypesFilter/TypesFilter";
-import axios from "axios";
-import { useEffect, useState } from "react";
 import Style from "./style";
 
 export default function Collection() {
   const [card, setCard] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [type, setType] = useState("");
-  const [isBuy, setIsBuy] = useState(false);
 
   useEffect(() => {
     axios
@@ -51,8 +51,17 @@ export default function Collection() {
           })
           .map((element) => {
             return (
-              <li key={element.id}>
-                <Cards cardData={element} isBuy={isBuy} setIsBuy={setIsBuy} />
+              <li className="card" key={element.id}>
+                <Card cardData={element} />
+                <div className="purchase">
+                  <p>
+                    Price: <span>{element.price}</span>$
+                  </p>
+                  <Link to={`/carddetail/${element.id}`}>
+                    <button type="button">More detail</button>
+                  </Link>
+                  <button type="submit">Add to cart</button>
+                </div>
               </li>
             );
           })}

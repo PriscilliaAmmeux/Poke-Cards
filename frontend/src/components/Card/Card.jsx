@@ -1,13 +1,17 @@
-import image from "@assets/Card1.png";
+import PropTypes from "prop-types";
 import Style from "./style";
 
-export default function Card() {
+export default function Card({ cardData }) {
   return (
     <Style>
-      <img className="cardImage" src={image} alt="pledge card" />
-      <div className="parmeter">
-        <p className="cardPrice">Price: 150$</p>
-      </div>
+      <img className="cardImage" src={cardData.small_img} alt={cardData.name} />
     </Style>
   );
 }
+
+Card.propTypes = {
+  cardData: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    small_img: PropTypes.string.isRequired,
+  }).isRequired,
+};
