@@ -1,6 +1,14 @@
 import NavBar from "@components/Navbar/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Pagination } from "swiper";
+/* eslint-disable import/no-unresolved */
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+/* eslint-disable import/no-unresolved */
+
 import Style from "./style";
 
 export default function Deck() {
@@ -28,24 +36,33 @@ export default function Deck() {
       <p>Wallet : {user.wallet} </p>
       <h2>Your collection</h2>
       <ul>
-        {cards
-          .filter((data) => {
-            if (data.level < 8) {
-              return true;
-            }
-            return false;
-          })
-          .map((data) => {
-            return (
-              <li key={data.id}>
-                <img
-                  className="displayDeck"
-                  src={data.small_img}
-                  alt={data.name}
-                />
-              </li>
-            );
-          })}
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={8}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[FreeMode, Pagination, Navigation]}
+          className="my_free_swiper"
+        >
+          {cards
+            .filter((data) => {
+              if (data.level < 8) {
+                return true;
+              }
+              return false;
+            })
+            .map((data) => {
+              return (
+                <SwiperSlide key={data.id}>
+                  <img
+                    className="displayDeck"
+                    src={data.small_img}
+                    alt={data.name}
+                  />
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
       </ul>
       <h2>Your actuel deck</h2>
       <ul>
