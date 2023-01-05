@@ -55,6 +55,7 @@ export default function Deck() {
               return (
                 <SwiperSlide key={data.id}>
                   <img
+                    draggable="true"
                     className="displayDeck"
                     src={data.small_img}
                     alt={data.name}
@@ -83,6 +84,7 @@ export default function Deck() {
             return (
               <li key={data.id}>
                 <img
+                  draggable="true"
                   className="displayDeck"
                   src={data.small_img}
                   alt={data.name}

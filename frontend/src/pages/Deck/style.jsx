@@ -28,6 +28,7 @@ export default styled.section`
 
   .displayDeck {
     margin: 0.5rem;
+    cursor: move;
   }
   .my_free_swiper {
     width: 95vw;
