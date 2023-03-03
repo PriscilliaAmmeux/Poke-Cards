@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 import Style from "./style";
 
 export default function RegisterForm() {
@@ -17,12 +18,30 @@ export default function RegisterForm() {
     evt.preventDefault();
     if (newUser.email === newUser.confirmEmail) {
       if (newUser.password === newUser.confirmPassword) {
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user`, newUser);
+        axios
+          .post(`${import.meta.env.VITE_BACKEND_URL}/api/user`, newUser)
+          .then(
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "You are registered",
+              showConfirmButton: false,
+              timer: 1500,
+            })
+          );
       } else {
-        alert("Password is not same!!!");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Both passwords do not match!!",
+        });
       }
     } else {
-      alert("Email is not same!!");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Both email do not match !!",
+      });
     }
   };
   return (
@@ -30,7 +49,7 @@ export default function RegisterForm() {
       <form className="registerform" onSubmit={hSubmit}>
         <h2 className="signupTitle">Sign Up</h2>
         <label className="registerLabel" htmlFor="pseudo">
-          You pseudo:
+          Pseudo:
           <input
             className="registerinput"
             type="text"
@@ -41,7 +60,7 @@ export default function RegisterForm() {
           />
         </label>
         <label className="registerLabel" htmlFor="email">
-          You email:
+          Email:
           <input
             className="registerinput"
             type="email"
@@ -52,7 +71,7 @@ export default function RegisterForm() {
           />
         </label>
         <label className="registerLabel" htmlFor="confirEmail">
-          Confirm You E-mail:
+          Confirm E-mail:
           <input
             className="registerinput"
             type="email"
@@ -63,7 +82,7 @@ export default function RegisterForm() {
           />
         </label>
         <label className="registerLabel" htmlFor="password">
-          You password:
+          Password:
           <input
             className="registerinput"
             type="password"
@@ -74,7 +93,7 @@ export default function RegisterForm() {
           />
         </label>
         <label className="registerLabel" htmlFor="confirmPassword">
-          Confirm you password:
+          Confirm password:
           <input
             className="registerinput"
             type="password"
