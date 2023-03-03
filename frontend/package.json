@@ -19,6 +19,7 @@
     "reset-css": "^5.0.1",
     "styled-components": "^5.3.6",
     "sweetalert2": "^11.7.3",
+    "swiper": "^8.4.5",
     "template-fullstack": "file:.."
   },
   "devDependencies": {

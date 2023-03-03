@@ -27,7 +27,19 @@ export default styled.section`
   }
 
   .displayDeck {
-    list-style: none;
     margin: 0.5rem;
+    cursor: move;
+  }
+  .my_free_swiper {
+    width: 95vw;
+    .swiper-button-next {
+      color: #ff2415;
+      right: 2%;
+    }
+    .swiper-button-prev {
+      color: #ff2415;
+
+      left: 2%;
+    }
   }
 `;
