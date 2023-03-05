@@ -8,6 +8,7 @@ import Contact from "@pages/Contact/Contact";
 import PledgeStore from "@pages/PledgeStore/PledgeStore";
 import CardDetail from "@pages/CardDetails/CardDetail";
 import Test from "@pages/Test/Test";
+import Register from "@pages/Register/Register";
 import Style from "./style";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/pledge" element={<PledgeStore />} />
         <Route path="/carddetail/:id" element={<CardDetail />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Style>
   );
