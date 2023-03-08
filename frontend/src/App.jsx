@@ -9,6 +9,7 @@ import PledgeStore from "@pages/PledgeStore/PledgeStore";
 import CardDetail from "@pages/CardDetails/CardDetail";
 import Test from "@pages/Test/Test";
 import Register from "@pages/Register/Register";
+import Connect from "@pages/Connect/Connect";
 import Style from "./style";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/carddetail/:id" element={<CardDetail />} />
         <Route path="/test" element={<Test />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/connect" element={<Connect />} />
       </Routes>
     </Style>
   );
