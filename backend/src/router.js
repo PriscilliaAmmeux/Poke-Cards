@@ -24,4 +24,9 @@ router.get("/api/pokemon/:id", pokemonHandlers.getPokemonById);
 router.put("/api/pokemon/:id", pokemonHandlers.putPokemonById);
 router.post("/api/pokemon", pokemonHandlers.postPokemon);
 
+const authControlers = require("./controllers/authControllers");
+
+router.post("/signup", authControlers.signup);
+router.post("/login", authControlers.login);
+
 module.exports = router;
