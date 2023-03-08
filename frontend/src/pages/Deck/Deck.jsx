@@ -8,10 +8,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 /* eslint-disable import/no-unresolved */
-
 import Style from "./style";
 
 export default function Deck() {
+  const [isActive] = useState("Deck");
   const [cards, setCards] = useState([]);
   const [user, setUser] = useState([]);
 
@@ -29,9 +29,10 @@ export default function Deck() {
         setUser(data);
       });
   }, []);
+
   return (
     <Style>
-      <NavBar />
+      <NavBar isActive={isActive} />
       <h1>Pseudo : {user.pseudo} </h1>
       <p>Wallet : {user.wallet} </p>
       <h2>Your collection</h2>

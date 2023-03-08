@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import pokeball from "@assets/pokeball.png";
+import pokeCardsGames from "@assets/pokeCardsGames.png";
+
 import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 import Style from "./style";
 
 export default function Home() {
   return (
     <Style>
-      <h1 className="title">Pokecard Games</h1>
+      <img className="title" src={pokeCardsGames} alt="Poke Cards Games" />
       <div className="navBar">
         <ul>
           <div className="right">

@@ -1,11 +1,12 @@
 import NavBar from "@components/Navbar/NavBar";
-
+import { useState } from "react";
 import Style from "./style";
 
 export default function Contact() {
+  const [isActive] = useState("Contact");
   return (
     <Style>
-      <NavBar />
+      <NavBar isActive={isActive} />
       <div className="form">
         <h1 className="titleForm">Contact Us</h1>
         <label htmlFor="email">
