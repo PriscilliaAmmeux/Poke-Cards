@@ -7,4 +7,5 @@ export default styled.div`
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
 `;
