@@ -8,6 +8,7 @@ import TypesFilter from "@components/TypesFilter/TypesFilter";
 import Style from "./style";
 
 export default function Collection() {
+  const [isActive] = useState("Collection");
   const [card, setCard] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [type, setType] = useState("");
@@ -21,7 +22,7 @@ export default function Collection() {
   }, []);
   return (
     <Style>
-      <NavBar />
+      <NavBar isActive={isActive} />
       <section className="filter">
         <TypesFilter setType={setType} />
         <InputFilter

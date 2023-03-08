@@ -10,11 +10,16 @@ export default styled.nav`
   .link {
     text-decoration: none;
   }
+  .activeStyle {
+    font-size: 1.2rem;
+  }
   .item {
     font-weight: bold;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
     cursor: pointer;
     font-size: 1rem;
+    &:hover {
+      font-size: 1.2rem;
+    }
   }
 `;

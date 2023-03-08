@@ -8,7 +8,6 @@ export default styled.section`
     font-size: 0.75rem;
     color: #fff;
     padding-left: 1rem;
-    font-family: "Press Start 2P", cursive;
   }
 
   h2 {
