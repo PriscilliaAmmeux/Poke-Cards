@@ -33,17 +33,25 @@ export default function Contact() {
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder="Your Full Name/pseudo"
+            className="label"
             required
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="label"
+          />
           <textarea
             name="message"
             rows="7"
             placeholder="Your Message"
+            className="label"
             required
           />
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn-submit btn-primary">
             Send Message
           </button>
         </form>
