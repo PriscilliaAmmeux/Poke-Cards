@@ -33,17 +33,17 @@ export default function Deck() {
   return (
     <Style>
       <NavBar isActive={isActive} />
-      <h1>Pseudo : {user.pseudo} </h1>
-      <p>Wallet : {user.wallet} </p>
-      <h2>Your collection</h2>
-      <ul>
+      <h1 className="pseudo-deck">Pseudo : {user.pseudo} </h1>
+      <p className="wallet-deck">Wallet : {user.wallet} </p>
+      <h2 className="title-deck">Your collection</h2>
+      <ul className="list-deck">
         <Swiper
           slidesPerView={5}
           spaceBetween={8}
           pagination={{ clickable: true }}
           navigation
           modules={[FreeMode, Pagination, Navigation]}
-          className="my_free_swiper"
+          className="swiper"
         >
           {cards
             .filter((data) => {
@@ -66,8 +66,8 @@ export default function Deck() {
             })}
         </Swiper>
       </ul>
-      <h2>Your actuel deck</h2>
-      <ul>
+      <h2 className="title-deck">Your actuel deck</h2>
+      <ul className="list-deck">
         {cards
           .filter((data) => {
             if (

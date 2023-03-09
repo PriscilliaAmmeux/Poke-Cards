@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
 export default styled.section`
-  @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-  h1,
-  p {
-    font-size: 0.75rem;
+  .pseudo-deck,
+  .wallet-deck {
+    font-size: 1rem;
     color: #fff;
     padding-left: 1rem;
   }
 
-  h2 {
+  .title-deck {
     color: #fff;
     font-size: 2rem;
     padding-left: 1rem;
@@ -18,7 +16,7 @@ export default styled.section`
     align-items: center;
   }
 
-  ul {
+  .list-deck {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,15 +27,14 @@ export default styled.section`
     margin: 0.5rem;
     cursor: move;
   }
-  .my_free_swiper {
-    width: 95vw;
+  .swiper {
+    width: 90vw;
     .swiper-button-next {
       color: #ff2415;
-      right: 2%;
+      right: 1%;
     }
     .swiper-button-prev {
       color: #ff2415;
-
       left: 2%;
     }
   }
