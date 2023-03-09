@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.section`
-  color: white;
+  color: eee;
   height: 100vh;
   width: 100vw;
 
@@ -19,27 +19,41 @@ export default styled.section`
       background-color: #15172b;
       border-radius: 20px;
       box-sizing: border-box;
-      height: 70vh;
-      padding: 10px;
-      width: 50vw;
-      opacity: 0.5;
+      height: 60vh;
+      width: 40vw;
+      opacity: 0.7;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 25%;
+      margin: 0 30vw;
     }
 
-    label {
+    .label {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 2rem 0;
+      margin: 1rem 0;
+      width: 15vw;
+      border: 2px solid white;
     }
 
-    .submit {
-      max-width: 5vw;
+    .btn-submit {
+      width: max-content;
+      display: inline-block;
+      color: #eee;
+      padding: 0.75rem 1.2rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      border: 2px solid white;
+      border-radius: 10em;
+      transition: all 400ms ease;
+    }
+    .btn-primary {
+      background: #fa0a0a;
+      color: black;
+      font-weight: bold;
     }
   }
   @media screen and (max-width: 600px) {
