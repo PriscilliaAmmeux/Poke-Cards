@@ -52,16 +52,20 @@ export default function Collection() {
           })
           .map((element) => {
             return (
-              <li className="card" key={element.id}>
+              <li className="card-collection" key={element.id}>
                 <Card cardData={element} />
-                <div className="purchase">
-                  <p>
+                <div className="purchase-collection">
+                  <p className="price-collection ">
                     Price: <span>{element.price}</span>$
                   </p>
                   <Link to={`/carddetail/${element.id}`}>
-                    <button type="button">More detail</button>
+                    <button className="btn-submit btn-primary" type="button">
+                      More detail
+                    </button>
                   </Link>
-                  <button type="submit">Add to cart</button>
+                  <button className="btn-submit btn-primary" type="submit">
+                    Add to cart
+                  </button>
                 </div>
               </li>
             );

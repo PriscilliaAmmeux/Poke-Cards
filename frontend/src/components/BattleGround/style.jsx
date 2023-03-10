@@ -7,14 +7,32 @@ export default styled.section`
   background-size: cover;
   display: flex;
   justify-content: space-around;
-  color: white;
+  color: #f1f1f1;
+  height: 100vh;
+
   label {
     display: flex;
-    flex-direction: column;
-    margin: 7rem 0;
+    margin: 3rem 0;
+    font-size: 1.5rem;
   }
   img {
-    width: 25vw;
-    margin: 1rem 0;
+    width: 33vw;
+    margin: 1vh 0;
+  }
+
+  @media (min-width: 851px) {
+    label {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    label {
+      flex-direction: column;
+    }
   }
 `;
