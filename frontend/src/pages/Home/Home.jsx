@@ -11,7 +11,7 @@ export default function Home() {
       <NavBar isActive={isActive} />
 
       <img src={pokeCardsGames} alt="Poke Cards Games" className="home-title" />
-      <p className="bienvenue">Bienvenue !</p>
+      <p className="welcome">Welcome !</p>
       <img className="pokeball" src={pokeball} alt="Pokeball" />
     </Style>
   );

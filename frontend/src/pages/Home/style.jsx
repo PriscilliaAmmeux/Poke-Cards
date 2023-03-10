@@ -19,9 +19,9 @@ export default styled.section`
     width: 80vw;
     height: auto;
   }
-  .bienvenue {
+  .welcome {
     color: #f1f1f1;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 2rem;
   }
 
